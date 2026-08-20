@@ -1,6 +1,8 @@
 // server.mjs
 import { createServer } from 'node:http';
+var cors = require('cors');
 const server = createServer((req, res) => {
+  res.writeHead('Access-Control-Allow-Origin', '*');
   res.writeHead(200, { 'Content-Type': 'text/json' });
   res.end('{"message": "Hello"}');
 });
