@@ -1,7 +1,7 @@
 // server.mjs
 import { createServer } from 'node:http';
 const server = createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.writeHead(200, { 'Content-Type': 'text/json' });
   res.end('{"message": "Hello"}');
 });
 const port = process.env.PORT || 4000 
